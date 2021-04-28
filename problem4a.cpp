@@ -29,9 +29,13 @@ int main(){
      * Using the delimiter in the getline method to separate by strings
      * instead of a split function.  Little harder to do as you have to
      * handle the \r\n in the file and use eof instead of getline in the
-     * while condition.  This quick implementation still misses the last food
-     * type for the last animal in the file - I'll fix it when I have time.
+     * while condition.
      * **/
+
+    //TODO This quick implementation still misses the last food type for
+    // the last animal in the file - I'll fix it when I have time.  The reason
+    // is because the delimiter does not exist after the last item in the file.
+
     infile.open(filename);
     if (infile.is_open()) {
         (getline(infile, line));

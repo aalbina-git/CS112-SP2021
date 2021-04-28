@@ -76,7 +76,7 @@ public:
     int getCage(){return cage_num;}
 
     bool isHungry(){
-        time_t datetime = time(0);
+        time_t datetime = time(nullptr);
         tm *local_time = localtime(&datetime);
         int curHour = local_time->tm_hour;
         if(curHour < feedHour)
